@@ -1,0 +1,152 @@
+.blob {
+  height: 500px;
+  pointer-events: none;
+  aspect-ratio: 1;
+  background: linear-gradient(to right, aquamarine, mediumpurple);
+  opacity: 0.3;
+  filter: blur(800px);
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: ease-in 5s infinite blobAnimate;
+}
+
+@keyframes blobAnimate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.letter {
+  display: inline-block;
+  transition: all ease 0.2s;
+  font-weight: 900;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+}
+
+@keyframes bounceLetter {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.letterParent {
+  line-height: 100px;
+}
+
+.letterParent:hover > .letter:nth-child(1) {
+  transform: translate(-40px, -40px) rotate(-20deg);
+}
+.letterParent:hover > .letter:nth-child(2) {
+  transform: translate(-20px, -40px) rotate(10deg);
+}
+.letterParent:hover > .letter:nth-child(3) {
+  transform: translate(-10px, -60px) rotate(-30deg);
+}
+.letterParent:hover > .letter:nth-child(4) {
+  transform: translate(0px, -40px) rotate(10deg);
+}
+.letterParent:hover > .letter:nth-child(5) {
+  transform: translate(10px, -40px) rotate(10deg);
+}
+.letterParent:hover > .letter:nth-child(6) {
+  transform: translate(20px, -40px) rotate(-30deg);
+}
+.letterParent:hover > .letter:nth-child(7) {
+  transform: translate(10px, -40px) rotate(10deg);
+}
+.letterParent:hover > .letter:nth-child(8) {
+  transform: translate(10px, -40px) rotate(-10deg);
+}
+.letterParent:hover > .letter:nth-child(9) {
+  transform: translate(10px, -40px) rotate(10deg);
+}
+
+.downArrow {
+  animation: bounceArrow ease-in-out 2s infinite;
+}
+
+@keyframes bounceArrow {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.aboutMe:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: orangered;
+  height: 150px;
+  right: 10px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  animation: bounceArrow 4s ease-in infinite forwards;
+}
+
+.test {
+  background-color: orangered;
+  height: 30px;
+  aspect-ratio: 1;
+  width: 30px;
+
+  background-size: 40px 30px;
+}
+
+.projectCard {
+  height: 350px;
+  aspect-ratio: 1;
+  animation: projectCardAnimation 0.4s ease-in-out 1 forwards;
+}
+.cardHover h1 {
+  font-size: 75px;
+  color: white;
+}
+.cardParent {
+  position: relative;
+
+}
+.cardHover {
+  position: absolute;
+top: 0;
+height: 0;
+
+
+
+  overflow: hidden;
+  transition: all ease 3s;
+}
+
+.cardParent:hover .cardHover {
+  position: absolute;
+
+height: 100vh;
+  transition: all ease 3s;
+}
+@keyframes projectCardAnimation {
+  from {
+    transform: scale(1);
+    transition: all ease-in;
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
