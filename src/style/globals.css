@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Recife";
+  src: url('../fonts/RecifeDisplay-LightItalic.woff');
+}
+@font-face {
+  font-family: "Neubit";
+  src: url('../fonts/NeueBit-Regular.ttf');
+}
+
+
 .blob {
   height: 500px;
   pointer-events: none;
@@ -31,6 +41,29 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px;
 }
+.projectTitle{
+   display: inline-block;
+  transition: all ease 0.2s;
+  font-weight: 900;
+  font-size: 120px;
+  -webkit-text-fill-color: transparent;
+  color:#1a1a1a;
+  -webkit-text-stroke: 1px;
+}
+
+.projectTitle:hover{
+     display: inline-block;
+  transition: all ease 0.8s;
+  font-weight: 900;
+  font-size: 120px;
+    -webkit-text-stroke: 1px;
+      -webkit-text-fill-color: #1a1a1a;
+}
+
+ul li{
+  cursor: pointer;
+}
+
 
 @keyframes bounceLetter {
   from {
@@ -90,6 +123,11 @@
   }
 }
 
+
+.headerFont{
+  font-family: 'ClashDisplay';
+
+}
 .aboutMe:after {
   content: "";
   position: absolute;
@@ -134,6 +172,81 @@ height: 0;
   overflow: hidden;
   transition: all ease 3s;
 }
+
+
+
+.link{
+
+  color: wheat;
+  display: flex;
+  font-size: 70px;
+
+align-items: center;
+cursor: pointer;
+  position: relative ;
+  top: 0;
+  z-index: 0;
+  justify-content: space-between;
+  transition: all 1s ease;
+
+}
+/* .link:hover{
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+
+
+} */
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: url('../fonts/ClashDisplay-Bold.otf');
+}
+
+ .arrow{
+  animation: arrowMove 0.8s ease-in-out infinite forwards;
+}
+
+@keyframes arrowMove {
+  0%{
+    position :relative;
+left: 0px;
+  }50%{
+    position :relative;
+
+left: 5px;
+  }
+  100%{
+     position :relative;
+left: 0px;
+  }
+}
+.link .hover-reveal{
+  position: absolute;
+  aspect-ratio: 1;
+  width: 300px;
+left: 50%;
+z-index: 20;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.8)
+  ;
+transition: all 0.8s ease-out;
+}
+
+.link .hover-reveal .hidden-img {
+  z-index: 20;
+height: 100%;
+width: 100%;
+
+position: absolute;
+
+
+}
+
+.paraFont{
+  font-family: "Recife";
+}
+
 
 .cardParent:hover .cardHover {
   position: absolute;

@@ -41,8 +41,8 @@ const Hero = () => {
 
   useLayoutEffect(() => {
     document.addEventListener("mousemove", blobMove);
-    enhance(fancyword.current, "FULLSTACK");
-    enhance(fancySecond.current, "DEVELOPER");
+    enhance(fancyword.current, "Fullstack");
+    enhance(fancySecond.current, "Developer");
 
     return () => {
       document.removeEventListener("mousemove", blobMove);
@@ -50,28 +50,31 @@ const Hero = () => {
       // enhance(fancySecond.current, "DEVELOPER");
     };
   }, []);
-  useGSAP(() => {
-    const timeLine = gsap.timeline({ defaults: { duration: 0.3 } });
-    timeLine.set(titleRef.current, { opacity: 0, y: -100, duration: 0.02 });
-    timeLine.set(secondTitle.current, { opacity: 0, x: 0 });
 
-    timeLine
-      .to(titleRef.current, {
-        y: 0,
-        opacity: 0.2,
-        ease: "power3.in",
-      })
-      .to(titleRef.current, { y: -35, opacity: 0.4 })
-      .to(titleRef.current, { y: 0, opacity: 1, ease: "power3.in" })
-      .to(titleRef.current, { y: -20, opacity: 1 })
-      .to(titleRef.current, { y: 0, opacity: 1, ease: "power3.in" })
-      .to(secondTitle.current, { opacity: 1, x: 100, ease: "power3.in" });
 
-    timeLine.play();
-  });
+  useLayoutEffect(() => {
+   const timeLine = gsap.timeline({ defaults: { duration: 0.3 } });
+   timeLine.set(titleRef.current, { opacity: 0, y: -100, duration: 0.02 });
+   timeLine.set(secondTitle.current, { opacity: 0, x: 0 });
+
+   timeLine
+     .to(titleRef.current, {
+       y: 0,
+       opacity: 0.2,
+       ease: "power3.in",
+     })
+     .to(titleRef.current, { y: -35, opacity: 0.4 })
+     .to(titleRef.current, { y: 0, opacity: 1, ease: "power3.in" })
+     .to(titleRef.current, { y: -20, opacity: 1 })
+     .to(titleRef.current, { y: 0, opacity: 1, ease: "power3.in" })
+     .to(secondTitle.current, { opacity: 1, x: 100, ease: "power3.in" });
+
+   timeLine.play();
+  },[])
+
 
   return (
-    <div className='bg-[#000000] w-full sm:min-h-screen text-mainText overflow-x-hidden z-0'>
+    <div className='bg-[#000000] w-full sm:min-h-screen text-mainText overflow-x-hidden z-0 '>
       <div className='blob ' ref={blob}></div>
 
       <nav className=' flex justify-between mt-5'>
@@ -98,7 +101,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <section className='flex flex-col items-center justify-center h-[80vh] lg:text-[120px] md:text-[80px] text-[60px]  cursor-pointer'>
+      <section className='flex flex-col items-center justify-center h-[80vh] lg:text-[120px] md:text-[80px] text-[60px]  cursor-pointer headerFont'>
         <div ref={fancyword} className='flex letterParent'></div>
         <div ref={fancySecond} className='letterParent'></div>
       </section>
