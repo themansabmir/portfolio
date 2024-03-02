@@ -165,11 +165,14 @@ export const Projects = () => {
 
   return (
     <section className='overflow-x-hidden projectSection '>
-      <div className=' text-[60px] sm:text-[80px] md:text-[250px] uppercase font-serif font-[900] text-mainText'>
+      <div className=' text-[60px] sm:text-[80px] md:text-[250px]  font-serif font-[900] headerFont text-mainText'>
         <h1>
           Select <br /> ed{" "}
         </h1>
         <h1>Work </h1>
+        <p className="text-lg text-black font-sans font-medium">
+          Where Dreams Become Code, and Code Becomes Reality (mmm most of the time).
+        </p>
       </div>
 
       <div className='min-h-screen w-full '>

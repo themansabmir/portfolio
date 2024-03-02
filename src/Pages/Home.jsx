@@ -4,6 +4,7 @@ import { About } from "../components/About";
 import "../style/globals.css";
 import { Projects } from "../components/Projects";
 import Services from "../components/Services";
+import { Contact } from "../components/Contact";
 
 export const Home = () => {
   return (
@@ -13,6 +14,7 @@ export const Home = () => {
         <About />
         <Projects />
         <Services />
+        <Contact />
       </div>
     </div>
   );

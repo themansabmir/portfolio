@@ -6,7 +6,9 @@
   font-family: "Neubit";
   src: url('../fonts/NeueBit-Regular.ttf');
 }
-
+.neuBit{
+  font-family: "Neubit";
+}
 
 .blob {
   height: 500px;
@@ -128,6 +130,26 @@ ul li{
   font-family: 'ClashDisplay';
 
 }
+
+
+.navLinks{
+    transition: all ease 1s;
+}
+
+.navLinks:hover:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  top: 0;
+  height: 80px;
+  width: 80px;
+  transform: scale(2);
+  background-color: purple;
+
+}
+
 .aboutMe:after {
   content: "";
   position: absolute;
@@ -213,12 +235,16 @@ left: 0px;
   }50%{
     position :relative;
 
-left: 5px;
+left: -5px;
   }
   100%{
      position :relative;
 left: 0px;
   }
+}
+.link:hover{
+  color: white;
+  margin-left:13px;
 }
 .link .hover-reveal{
   position: absolute;

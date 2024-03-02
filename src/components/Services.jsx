@@ -45,7 +45,7 @@ const Services = () => {
 
   return (
     <div className='min-h-screen  mx-auto  serviceContainer '>
-      <h1 className='text-[150px] text-mainText'>Services</h1>
+      <h1 className='text-[250px] text-mainText headerFont'>Services</h1>
 
       <nav className='w-full'>
         <div

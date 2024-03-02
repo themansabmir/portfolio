@@ -61,13 +61,13 @@ export const About = () => {
   //   });
   // }, []);
   return (
-    <div className=' bg- min-h-screen  w-full '>
+    <div className=' bg- min-h-screen   mx-20'>
       <h1 className='float-right text-[70px] sm:text-[80px]  font-[900]  text-mainText  relative  z-10 aboutMe'>
         <span className='aboutMe'></span>
         ABOUT ME
       </h1>
 
-      <div className='char text-justify text-[30px] max-w-lg paraFont' ref={main}>
+      <div className='char text-justify text-[30px] max-w-3xl paraFont' ref={main}>
         {phrase.split(" ").map((char, i) => {
           return (
             <span className='char text-mainText' key={i}>

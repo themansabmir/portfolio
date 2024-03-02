@@ -78,10 +78,10 @@ const Hero = () => {
       <div className='blob ' ref={blob}></div>
 
       <nav className=' flex justify-between mt-5'>
-        <div className=''>
+        <div className='headerFont  text-4xl'>
           <h1 ref={logoText} data-logo='MANSAB MIR'>
             {" "}
-            {`mansab mir`}
+            {`MANSAB MIR`}
           </h1>
         </div>
         <div>
@@ -90,23 +90,27 @@ const Hero = () => {
           </button>
         </div>
       </nav>
-      <div className='absolute mt-20 ml-20 text-[14px] sm:flex justify-between sm:w-[1000px] '>
-        <h1 ref={titleRef}>
-          Available for exciting <br />
-          collaborations and projects
-        </h1>
-        <p className='float-right'>
-          Solving digital <br />
-          problems since 2k19
-        </p>
+      <div className='w-full'>
+        <div className=' mt-20 w-10/12 mx-auto  text-[16px] sm:flex justify-between   text-[#ff4500] '>
+          <h1 ref={titleRef}>
+            Available for exciting <br />
+            collaborations and projects
+          </h1>
+          <p className='float-right'>
+            Solving digital <br />
+            problems since 2k19
+          </p>
+        </div>
       </div>
 
-      <section className='flex flex-col items-center justify-center h-[80vh] lg:text-[120px] md:text-[80px] text-[60px]  cursor-pointer headerFont'>
+      <section className='flex flex-col items-center justify-start h-[70vh] lg:text-[120px] md:text-[80px] text-[60px]  cursor-pointer headerFont'>
         <div ref={fancyword} className='flex letterParent'></div>
         <div ref={fancySecond} className='letterParent'></div>
       </section>
-      <div className='downArrow fixed'>
+      <div className='downArrow fixed ml-28 flex'>
+        <h1>Scroll</h1>
         <DownArrow />
+        <h1>Down</h1>
       </div>
     </div>
   );
