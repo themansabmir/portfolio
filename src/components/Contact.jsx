@@ -1,17 +1,17 @@
 import React, { useEffect, useRef } from "react";
 
 export const Contact = () => {
-  const cursor = useRef(null)
-
+  const cursor = useRef(null);
 
   useEffect(() => {
-    const elem = cursor.current
+    const elem = cursor.current;
 
-    document.addEventListener('mousemove', (e) => {
-      elem.style.position = "absolute"
-      elem.style.left= e.clientX +'px'
-    })
-  },[])
+    document.addEventListener("mousemove", (e) => {
+      console.log(e)
+      elem.style.left = e.clientX + "px";
+      elem.style.top = e.clientY + "px";
+    });
+  }, []);
 
   return (
     <div className=''>

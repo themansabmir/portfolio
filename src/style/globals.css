@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Recife";
-  src: url('../fonts/RecifeDisplay-LightItalic.woff');
+  src: url("../fonts/RecifeDisplay-LightItalic.woff");
 }
 @font-face {
   font-family: "Neubit";
-  src: url('../fonts/NeueBit-Regular.ttf');
+  src: url("../fonts/NeueBit-Regular.ttf");
 }
-.neuBit{
+.neuBit {
   font-family: "Neubit";
 }
 
@@ -43,29 +43,28 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px;
 }
-.projectTitle{
-   display: inline-block;
+.projectTitle {
+  display: inline-block;
   transition: all ease 0.2s;
   font-weight: 900;
   font-size: 120px;
   -webkit-text-fill-color: transparent;
-  color:#1a1a1a;
+  color: #1a1a1a;
   -webkit-text-stroke: 1px;
 }
 
-.projectTitle:hover{
-     display: inline-block;
+.projectTitle:hover {
+  display: inline-block;
   transition: all ease 0.8s;
   font-weight: 900;
   font-size: 120px;
-    -webkit-text-stroke: 1px;
-      -webkit-text-fill-color: #1a1a1a;
+  -webkit-text-stroke: 1px;
+  -webkit-text-fill-color: #1a1a1a;
 }
 
-ul li{
+ul li {
   cursor: pointer;
 }
-
 
 @keyframes bounceLetter {
   from {
@@ -125,29 +124,29 @@ ul li{
   }
 }
 
-
-.headerFont{
-  font-family: 'ClashDisplay';
-
+.headerFont {
+  font-family: "ClashDisplay";
 }
 
 
-.navLinks{
-    transition: all ease 1s;
-}
-
-.navLinks:hover:after{
-  content: "";
-  position: absolute;
-  left: 0;
-  mix-blend-mode: difference;
+.cursor {
+  position: fixed;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  width: 20px;
   border-radius: 50%;
-  top: 0;
-  height: 80px;
-  width: 80px;
-  transform: scale(2);
-  background-color: purple;
+  background-color: white;
+  transition: all 0.1s ease;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
 
+}
+
+
+.navLinks:hover ~ .cursor{
+  transform: scale(6);
 }
 
 .aboutMe:after {
@@ -182,35 +181,28 @@ ul li{
 }
 .cardParent {
   position: relative;
-
 }
 .cardHover {
   position: absolute;
-top: 0;
-height: 0;
-
-
+  top: 0;
+  height: 0;
 
   overflow: hidden;
   transition: all ease 3s;
 }
 
-
-
-.link{
-
+.link {
   color: wheat;
   display: flex;
   font-size: 70px;
 
-align-items: center;
-cursor: pointer;
-  position: relative ;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
   top: 0;
   z-index: 0;
   justify-content: space-between;
   transition: all 1s ease;
-
 }
 /* .link:hover{
   border-bottom: 3px solid white;
@@ -221,63 +213,60 @@ cursor: pointer;
 
 @font-face {
   font-family: "ClashDisplay";
-  src: url('../fonts/ClashDisplay-Bold.otf');
+  src: url("../fonts/ClashDisplay-Bold.otf");
 }
 
- .arrow{
+.arrow {
   animation: arrowMove 0.8s ease-in-out infinite forwards;
 }
 
 @keyframes arrowMove {
-  0%{
-    position :relative;
-left: 0px;
-  }50%{
-    position :relative;
+  0% {
+    position: relative;
+    left: 0px;
+  }
+  50% {
+    position: relative;
 
-left: -5px;
+    left: -5px;
   }
-  100%{
-     position :relative;
-left: 0px;
+  100% {
+    position: relative;
+    left: 0px;
   }
 }
-.link:hover{
+.link:hover {
   color: white;
-  margin-left:13px;
+  margin-left: 13px;
 }
-.link .hover-reveal{
+.link .hover-reveal {
   position: absolute;
   aspect-ratio: 1;
   width: 300px;
-left: 50%;
-z-index: 20;
+  left: 50%;
+  z-index: 20;
   overflow: hidden;
   opacity: 0;
-  transform: scale(0.8)
-  ;
-transition: all 0.8s ease-out;
+  transform: scale(0.8);
+  transition: all 0.8s ease-out;
 }
 
 .link .hover-reveal .hidden-img {
   z-index: 20;
-height: 100%;
-width: 100%;
+  height: 100%;
+  width: 100%;
 
-position: absolute;
-
-
+  position: absolute;
 }
 
-.paraFont{
+.paraFont {
   font-family: "Recife";
 }
-
 
 .cardParent:hover .cardHover {
   position: absolute;
 
-height: 100vh;
+  height: 100vh;
   transition: all ease 3s;
 }
 @keyframes projectCardAnimation {
